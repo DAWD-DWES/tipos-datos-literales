@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
-        <h2>Valores literales</h2>
+        <h2>Valores literales enteros</h2>
         <table>
             <tr>
                 <td>0</td>
@@ -43,7 +43,7 @@
             </tr>
             <tr>
                 <td>PHP_INT_MIN</td>
-                <td><?php // var_dump(PHP_INT_MIN); ?></td>
+                <td><?php // var_dump(PHP_INT_MIN);   ?></td>
             </tr>
         </table>
         <h2>Valores literales flotantes (decimales)</h2>
@@ -79,96 +79,64 @@
         </table>
         <h2>Valores literales cadenas</h2>
         <table>
-            <tbody class="row-pair">
-                <tr>
-                    <td>'Esto es una cadena entre comillas simples.'</td>
-                </tr>
-                <tr>
-                    <td><?php var_dump('Esto es una cadena entre comillas simples. '); ?></td>
-                </tr>
-            </tbody>
-            <tbody class="row-pair">
-                <tr>
-                    <td>"¡Hola, $nombre! "</td>
-                </tr>
-                <tr> 
-                    <td><?php
-                        $nombre = 'Juan';
-                        var_dump("¡Hola, $nombre!");
-                        ?></td>
-                </tr>
-            </tbody>
-            <tbody class="row-pair">
-                <tr>
-                    <td>"Esto es una cadena entre comillas dobles con secuencias de escape: \n\t- Salto de línea \n\t- Tabulación \n\t- Barra invertida (\\)"</td>
-                </tr>
-                <tr>
-                    <td><pre><?php var_dump("Esto es una cadena entre comillas dobles con secuencias de escape: \n\t- Salto de línea \n\t- Tabulación \n\t- Barra invertida (\\)"); ?></pre></td>
-                </tr>
-            </tbody>
-            <tbody class="row-pair">
-                <tr>
-                    <td><pre>"Esto es una
+            <tr>
+                <td>'Esto es una cadena entre comillas simples.'</td>         
+                <td><?php var_dump('Esto es una cadena entre comillas simples. '); ?></td>
+            </tr>
+            <tr>
+                <td>"¡Hola, $nombre! "</td> 
+                <td><?php
+                    $nombre = 'Juan';
+                    var_dump("¡Hola, $nombre!");
+                    ?></td>
+            </tr>
+            <tr>
+                <td>"Esto es una cadena entre comillas dobles con secuencias de escape: \n\t- Salto de línea \n\t- Tabulación \n\t- Barra invertida (\\)"</td>
+                <td><pre><?php var_dump("Esto es una cadena entre comillas dobles con secuencias de escape: \n\t- Salto de línea \n\t- Tabulación \n\t- Barra invertida (\\)"); ?></pre></td>
+            </tr>
+            <tr>
+                <td><pre>"Esto es una
 cadena en
 varias líneas."</pre></td>
-                </tr>
-                <tr>
-                    <td><pre><?php var_dump("Esto es una
+                <td><pre><?php var_dump("Esto es una
 cadena en
 varias líneas."); ?></pre></td>
-                </tr>
-            </tbody>
-            <tbody class="row-pair">
-                <tr>
-                    <td><pre><<<'EOT'
+            </tr>
+            <tr>
+                <td><pre><<<'EOT'
     Esto es una cadena nowdoc.
     Puede abarcar varias líneas.
     Sin sustitución de variables.
     EOT</pre></td>
-                </tr>
-                <tr>
-                    <td><pre><?php var_dump(<<<'EOT'
+                <td><pre><?php var_dump(<<<'EOT'
                                             Esto es una cadena nowdoc.
                                             Puede abarcar varias líneas.
                                             Sin sustitución de variables.
                                             EOT); ?></pre></td>
-                </tr>
-            </tbody>
-            <tbody class="row-pair">
-                <tr>
-                    <td><pre>&lt;&lt;&lt;EOT
+            </tr>
+            <tr>
+                <td><pre>&lt;&lt;&lt;EOT
     Esto es una cadena heredoc.
     Puede abarcar varias líneas.
     Con sustitución de variables como por ejemplo $edad=$edad.
 EOT</pre></td>
-                </tr>
-                <tr>
-                    <td><pre><?php
-                            $edad = 32;
-                            var_dump(<<<EOT
+                <td><pre><?php
+                        $edad = 32;
+                        var_dump(<<<EOT
                                        Esto es una cadena heredoc.
                                        Puede abarcar varias líneas.
                                        Con sustitución de variables como por ejemplo \$edad=$edad.
                                        EOT);
-                            ?></pre></td>
+                        ?></pre></td>
+            </tr>
+            <tr>
+                <td>"Esta cadena contiene caracteres especiales: \$variable, \n, \t, \"comillas dobles\", 'comillas simples'"</td>
+                <td><pre><?php var_dump("Esta cadena contiene caracteres especiales: \$variable, \n, \t, \"comillas dobles\", 'comillas simples'"); ?></td>
                 </tr>
-            </tbody>
-            <tbody class="row-pair">
-                <tr>
-                    <td>"Esta cadena contiene caracteres especiales: \$variable, \n, \t, \"comillas dobles\", 'comillas simples'"</td>
-                </tr>
-                <tr>
-                    <td><pre><?php var_dump("Esta cadena contiene caracteres especiales: \$variable, \n, \t, \"comillas dobles\", 'comillas simples'"); ?></td>
-                </tr>
-            </tbody>
-            <tbody class="row-pair">
                 <tr>
                     <td>Unicode: \u{1F604}</td>
-                </tr>
-                <tr>
                     <td><?php var_dump("Unicode: \u{1F604}"); ?></td>
                 </tr>
-            </tbody>
         </table>
        <h2>Valores literales booleanos</h2>
         <table>
