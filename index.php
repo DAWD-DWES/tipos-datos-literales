@@ -43,7 +43,7 @@
             </tr>
             <tr>
                 <td>PHP_INT_MIN</td>
-                <td><?php // var_dump(PHP_INT_MIN);   ?></td>
+                <td><?php var_dump(PHP_INT_MIN);   ?></td>
             </tr>
         </table>
         <h2>Valores literales flotantes (decimales)</h2>
